@@ -18,7 +18,6 @@ def existe_usuario(numero_tarjeta: str, usuario: str) -> bool:
             SELECT 1 FROM clientes_visa
             WHERE numero_tarjeta = %s
               AND usuario = %s
-              AND habilitado = 1
             """,
             (numero_tarjeta, usuario)
         )
